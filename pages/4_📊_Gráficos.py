@@ -32,7 +32,7 @@ with tab1:
           st.write(conteos[var_cual])
           st.write(conteos["Cantidad"])
 
-          fig1 = px.bar(conteos, x= conteos[var_cual], y= "Cantidad",
+          fig1 = px.bar(conteos, y= conteos[var_cual], x= "Cantidad",
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
                              height = 400)
