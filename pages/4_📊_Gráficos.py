@@ -25,7 +25,7 @@ with tab1:
                st.warning("Seleccione una variable para obtener el gráfico")
         else:
           
-          conteos = df[var_cual].value_counts()
+          conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
 
           st.dataframe(conteos)
 
