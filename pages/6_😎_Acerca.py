@@ -50,6 +50,7 @@ st.subheader("Descargar datos y Script de R")
 
 df_csv = df
 descarga = descargador_archivos(df_csv.to_csv(), nombre_archivo="Mundial", extension_archivo= "txt").descargar()
+
 link_descarga(ruta= ruta_html, nombre= nombre_html)
 
 st.balloons()
