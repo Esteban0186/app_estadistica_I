@@ -29,7 +29,7 @@ with tab1:
                fig1 = px.bar(conteos, x=conteos.index, y= var_cual, 
                             orientation= "h",
                             title= "Cantidad de jugadores por la variable {}".format(var_cual),
-                            labels={"Cantidad": "Cantidad de jugadores", var_cual: var_cual},
+                            labels={"Cantidad": "Cantidad de jugadores", var_cual: str(var_cual)},
                             text= "Cantidad",height=400)
                 
 
