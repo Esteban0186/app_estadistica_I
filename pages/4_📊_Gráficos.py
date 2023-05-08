@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 import plotly.express as px
-from streamlit_extras.no_default_selectbox import selectbox
 import plotly.graph_objects as go
 from Principal import df
 
@@ -17,7 +16,7 @@ with tab1:
         st.subheader("Variables Cualitativas")
         st.write("Descripción del tipo de variable y de gráficos")
 
-        var_cual = selectbox("Elija una variable para el gráfico", ["País", "Región", "Posición"])
+        var_cual = st.selectbox("Elija una variable para el gráfico", ["País", "Región", "Posición"])
 
         if var_cual == None:
                st.warning("Seleccione una variable para obtener el gráfico")
