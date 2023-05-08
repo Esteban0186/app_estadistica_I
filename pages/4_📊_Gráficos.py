@@ -29,7 +29,7 @@ with tab1:
 
           st.dataframe(conteos)
 
-          fig1 = px.bar(conteos, x= var_cual, y= "Cantidad",
+          fig1 = px.bar(conteos, x= conteos[var_cual], y= "Cantidad",
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
                              height = 400)
