@@ -27,11 +27,6 @@ with tab1:
           
           conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
 
-          st.dataframe(conteos)
-
-          st.write(conteos[var_cual])
-          st.write(conteos["Cantidad"])
-
           fig1 = px.bar(conteos, y= conteos[var_cual], x= "Cantidad",
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
