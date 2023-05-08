@@ -29,6 +29,9 @@ with tab1:
 
           st.dataframe(conteos)
 
+          st.write(conteos[var_cual])
+          st.write(conteos["Cantidad"])
+
           fig1 = px.bar(conteos, x= conteos[var_cual], y= "Cantidad",
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
