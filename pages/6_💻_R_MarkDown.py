@@ -1,6 +1,5 @@
 import streamlit as st 
 from streamlit_extras.colored_header import colored_header
-import streamlit.components.v1 as components
 import base64
 
 #Descagar html
@@ -21,8 +20,8 @@ colored_header(
     color_name="orange-40")
 
 
-iframe = components.iframe(src="data/script_R.html", width=700, height=500)
+with open(ruta_html, 'r') as f:
+    html_content = f.read()
+    st.markdown(html_content, unsafe_allow_html=True)
 
-st.write(iframe)
-
-link_descarga(ruta= ruta_html, nombre= nombre_html)
+link_descarga(ruta=ruta_html, nombre=nombre_html)
