@@ -1,6 +1,6 @@
 import streamlit as st 
 from streamlit_extras.colored_header import colored_header
-from streamlit.components.v1 import IFrame
+import streamlit.components.v1 as components
 import base64
 
 #Descagar html
@@ -21,7 +21,7 @@ colored_header(
     color_name="orange-40")
 
 
-iframe = IFrame(src="data/script_R.html", width=700, height=500)
+iframe = components.iframe(src="data/script_R.html", width=700, height=500)
 
 st.write(iframe)
 
