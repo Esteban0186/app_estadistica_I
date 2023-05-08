@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_extras.let_it_rain import rain
 from streamlit_extras.colored_header import colored_header
 import base64
-#from Principal import df
+from Principal import df
 
 #Descargador de Archivos
 
