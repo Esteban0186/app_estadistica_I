@@ -26,6 +26,8 @@ with tab1:
         else:
                
                conteos = pd.DataFrame(df[var_cual].value_counts())
+               conteos = conteos.reset_index()
+               conteos = conteos.rename(columns={var_cual: 'Cantidad', 'index': var_cual})
                fig1 = px.bar(conteos, x=conteos.index, y= var_cual)#, 
                             #orientation= "h",
                             #title= "Cantidad de jugadores por la variable {}".format(var_cual),
