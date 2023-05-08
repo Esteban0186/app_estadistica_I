@@ -23,12 +23,12 @@ with tab1:
      else:
           #Crear la tabla de frecuencias
           frecuencias = df[var_cual].value_counts()
-          
+
           frecuencias_total = pd.DataFrame({var_cual: frecuencias.index, "Cantidad": frecuencias.values})
           total_general = {var_cual: "Total General", "Cantidad": frecuencias.sum()}
 
           frecuencias_total = pd.concat([frecuencias_total, pd.DataFrame(total_general, index=[0])], ignore_index=True)
-        
+
           #frecuencias_total = frecuencias.append(pd.Series(frecuencias.sum(), index=["Total General"]))
           #frecuencias_total = frecuencias_total.reset_index().rename(columns={"index": var_cual, 0: "Cantidad"})
 
@@ -51,8 +51,8 @@ with tab1:
 with tab2:
      st.subheader("Tabla de frecuencias cruzadas")
 
-     var_cual1 = selectbox("Seleccione una primera variable", ["País", "Región", "Posición"])
-     var_cual2 = selectbox("Seleccione una segunda variable", ["País", "Región", "Posición"])
+     var_cual1 = st.selectbox("Seleccione una primera variable", ["País", "Región", "Posición"])
+     var_cual2 = st.selectbox("Seleccione una segunda variable", ["Región", "Posición", "País"])
 
      if var_cual1 == var_cual2:
           st.warning("Elija dos variables diferentes")
