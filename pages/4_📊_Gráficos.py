@@ -22,16 +22,18 @@ with tab1:
         if var_cual == None:
                st.warning("Seleccione una variable para obtener el gráfico")
         else:
-          
+
           conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
+          
+          st.dataframe(conteos)
 
           fig1 = px.bar(conteos, y= conteos[var_cual], x= "Cantidad",
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
                              height = 400)
-                
 
-            
+
+
           st.plotly_chart(fig1, use_container_width= True)
 
 with tab2:
