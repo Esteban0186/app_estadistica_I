@@ -4,6 +4,7 @@ import streamlit as st
 from  PIL import Image
 from streamlit_extras.colored_header import colored_header
 import pandas as pd
+import base64
 
 
 #Objetos precargados
@@ -26,6 +27,15 @@ def limpiar_nombres(data_frame= None, variable = "", correccion = None, error = 
 df = limpiar_nombres(data_frame= df, variable = "Jugador",
                      error =malos, correccion = buenos)
 
+#Descagar html
+
+ruta_html = "data/script_R.html"
+nombre_html = 'script_R.html'
+
+def link_descarga(ruta, nombre):
+    with open(ruta, 'rb') as f:
+        archivo = f.read()
+        st.markdown(f'<a href="data:application/octet-stream;base64,{base64.b64encode(archivo).decode("utf-8")}" download="{nombre}">Descarga Script de R</a>', unsafe_allow_html=True)
 
 
 #Estilo de la página
@@ -43,6 +53,7 @@ def main():
                 label="Intro",
                 description="Descripción",
                 color_name="red-40")
+       link_descarga(ruta=ruta_html, nombre=nombre_html)
       
 
 
