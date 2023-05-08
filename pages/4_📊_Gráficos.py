@@ -25,12 +25,11 @@ with tab1:
                st.warning("Seleccione una variable para obtener el gráfico")
         else:
           
-          conteos = pd.DataFrame(df[var_cual].value_counts())
-          conteos = conteos.reset_index()
-          conteos = conteos.rename(columns= {0: "Cantidad"})
+          conteos = df[var_cual].value_counts().reset_index().rename(columns={'index': var_cual, var_cual: 'Cantidad'})
+
           st.dataframe(conteos)
 
-          fig1 = px.bar(conteos, x= "Cantidad", y= str(var_cual),
+          fig1 = px.bar(conteos, x= var_cual, y= "Cantidad",
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
                              height = 400)
