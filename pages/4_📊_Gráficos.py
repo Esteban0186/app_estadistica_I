@@ -24,18 +24,20 @@ with tab1:
         if var_cual == None:
                st.warning("Seleccione una variable para obtener el gráfico")
         else:
-               
-               conteos = pd.DataFrame(df[var_cual].value_counts())
-               conteos = conteos.reset_index()
-               conteos = conteos.rename(columns= {0: "Cantidad"})
-               fig1 = px.bar(conteos, x= "Cantidad", y= conteos[var_cual],
+          
+          conteos = pd.DataFrame(df[var_cual].value_counts())
+          conteos = conteos.reset_index()
+          conteos = conteos.rename(columns= {0: "Cantidad"})
+          st.dataframe(conteos)
+
+          fig1 = px.bar(conteos, x= "Cantidad", y= conteos[var_cual],
                              text = "Cantidad", 
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
                              height = 400)
                 
 
             
-               st.plotly_chart(fig1, use_container_width= True)
+          st.plotly_chart(fig1, use_container_width= True)
 
 with tab2:
        st.subheader("Variables Continuas")
