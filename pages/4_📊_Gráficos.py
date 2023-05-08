@@ -24,8 +24,6 @@ with tab1:
         else:
 
           conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
-          
-          st.dataframe(conteos)
 
           fig1 = px.bar(conteos, y= conteos[var_cual], x= "Cantidad",
                              text = "Cantidad", 

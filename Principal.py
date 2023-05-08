@@ -43,7 +43,7 @@ def link_descarga(ruta, nombre):
 st.set_page_config(page_title = "Trabajo final",
                    page_icon = img,
                    layout = "wide", #Inciar con las imagenes a lo ancho
-                   initial_sidebar_state = "auto")
+                   initial_sidebar_state = "expanded")
 
 
 def main():
