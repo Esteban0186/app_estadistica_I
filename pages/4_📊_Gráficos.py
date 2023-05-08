@@ -27,12 +27,11 @@ with tab1:
                
                conteos = pd.DataFrame(df[var_cual].value_counts())
                conteos = conteos.reset_index()
-               conteos = conteos.rename(columns={var_cual: 'Cantidad', 'index': var_cual})
-               fig1 = px.bar(conteos, x=conteos.index, y= var_cual)#, 
-                            #orientation= "h",
-                            #title= "Cantidad de jugadores por la variable {}".format(var_cual),
-                            #labels={"Cantidad": "Cantidad de jugadores", var_cual: str(var_cual)},
-                            #text= "Cantidad",height=400)
+               conteos = conteos.rename(columns= {0: "Cantidad"})
+               fig1 = px.bar(conteos, x= "Cantidad", y= conteos[var_cual],
+                             text = "Cantidad", 
+                             title = "Cantidad de jugadores por la variable {}".format(var_cual),
+                             height = 400)
                 
 
             
