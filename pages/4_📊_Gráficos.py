@@ -3,6 +3,7 @@ from streamlit_extras.colored_header import colored_header
 import plotly.express as px
 import plotly.graph_objects as go
 from streamlit_extras.no_default_selectbox import selectbox
+import pandas as pd
 import numpy as np
 from Principal import df
 
@@ -18,18 +19,21 @@ with tab1:
         st.subheader("Variables Cualitativas")
         st.write("Descripción del tipo de variable y de gráficos")
 
-        var_cual = st.selectbox("Elija una variable para el gráfico", ["País", "Región", "Posición"])
+        var_cual = selectbox("Elija una variable para el gráfico", ["País", "Región", "Posición"])
 
         if var_cual == None:
                st.warning("Seleccione una variable para obtener el gráfico")
         else:
-               frecuencias_graf = df[var_cual].value_counts()
-               frecuencias_graf = frecuencias_graf.reset_index().rename(columns={"index": var_cual, var_cual: "Cantidad"})
-               fig1 = px.bar(frecuencias_graf, x= "Cantidad", y= var_cual, orientation= "h",
+               
+               conteos = pd.DataFrame(df[var_cual].value_counts())
+               fig1 = px.bar(conteos, x=conteos.index, y= var_cual, 
+                            orientation= "h",
                             title= "Cantidad de jugadores por la variable {}".format(var_cual),
                             labels={"Cantidad": "Cantidad de jugadores", var_cual: var_cual},
-                            text=frecuencias_graf["Cantidad"],
-                            height=400)
+                            text= "Cantidad",height=400)
+                
+
+            
                st.plotly_chart(fig1, use_container_width= True)
 
 with tab2:

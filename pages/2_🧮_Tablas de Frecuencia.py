@@ -25,8 +25,9 @@ with tab1:
           frecuencias = df[var_cual].value_counts()
           
           frecuencias_total = pd.DataFrame({var_cual: frecuencias.index, "Cantidad": frecuencias.values})
-          total_general = pd.DataFrame({var_cual: ["Total General"], "Cantidad": [frecuencias.sum()]})
-          frecuencias_total = frecuencias_total.append(total_general, ignore_index=True)
+          total_general = {var_cual: "Total General", "Cantidad": frecuencias.sum()}
+
+          frecuencias_total = pd.concat([frecuencias_total, pd.DataFrame(total_general, index=[0])], ignore_index=True)
         
           #frecuencias_total = frecuencias.append(pd.Series(frecuencias.sum(), index=["Total General"]))
           #frecuencias_total = frecuencias_total.reset_index().rename(columns={"index": var_cual, 0: "Cantidad"})
