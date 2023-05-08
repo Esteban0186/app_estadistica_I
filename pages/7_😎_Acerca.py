@@ -22,16 +22,6 @@ class descargador_archivos():
           st.markdown(href, unsafe_allow_html = True)
 
 
-#Descagar html
-
-ruta_html = "data/script_R.html"
-nombre_html = 'script_R.html'
-
-def link_descarga(ruta, nombre):
-    with open(ruta, 'rb') as f:
-        archivo = f.read()
-        st.markdown(f'<a href="data:application/octet-stream;base64,{base64.b64encode(archivo).decode("utf-8")}" download="{nombre}">Descarga Script de R</a>', unsafe_allow_html=True)
-
 
 
 colored_header(
@@ -50,8 +40,6 @@ st.subheader("Descargar datos y Script de R")
 
 df_csv = df
 descarga = descargador_archivos(df_csv.to_csv(), nombre_archivo="Mundial", extension_archivo= "txt").descargar()
-
-link_descarga(ruta= ruta_html, nombre= nombre_html)
 
 st.balloons()
 
