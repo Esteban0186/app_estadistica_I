@@ -19,7 +19,7 @@ with tab1:
         st.subheader("Variables Cualitativas")
         st.write("Descripción del tipo de variable y de gráficos")
 
-        var_cual = selectbox("Elija una variable para el gráfico", ["País", "Región", "Posición"])
+        var_cual = st.selectbox("Elija una variable para el gráfico", ["País", "Región", "Posición"])
 
         if var_cual == None:
                st.warning("Seleccione una variable para obtener el gráfico")
@@ -28,7 +28,7 @@ with tab1:
           conteos = pd.DataFrame(df[var_cual].value_counts())
           conteos = conteos.reset_index()
           conteos = conteos.rename(columns= {0: "Cantidad"})
-          #st.dataframe(conteos)
+          st.dataframe(conteos)
 
           fig1 = px.bar(conteos, x= "Cantidad", y= str(var_cual),
                              text = "Cantidad", 
