@@ -33,6 +33,8 @@ with tab1:
                              title = "Cantidad de jugadores por la variable {}".format(var_cual),
                              height = 400)
 
+          fig1.update_layout({'font': {'size': 16}})
+
 
           st.plotly_chart(fig1, use_container_width= True)
 
