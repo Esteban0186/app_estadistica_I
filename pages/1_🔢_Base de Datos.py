@@ -1,10 +1,7 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.switch_page_button import switch_page
-
-
 from Principal import df
-
 
 colored_header(
                 label="Base de datos",
@@ -13,6 +10,6 @@ colored_header(
 
 st.dataframe(df.head(10))
 
-if st.button("Ir a Página Principal"):
+if st.button("Ir a Página Principal", key= "mi-boton"):
     switch_page("Principal")
 
