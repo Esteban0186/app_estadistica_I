@@ -23,13 +23,16 @@ with tab1:
                st.warning("Seleccione una variable para obtener el gráfico")
         else:
 
-          conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
+          #conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
+          conteos = df[var_cual].value_counts()
+          
+          st.dataframe(conteos)
 
-          fig1 = px.bar(conteos, y= conteos[var_cual], x= "Cantidad",
-                             text = "Cantidad", 
-                             title = "Cantidad de jugadores por la variable {}".format(var_cual),
-                             height = 400)
-
+          #fig1 = px.bar(conteos, y= conteos[var_cual], x= "Cantidad",
+          #                   text = "Cantidad",
+          #                   title = "Cantidad de jugadores por la variable {}".format(var_cual),
+          #                   height = 400)
+          fig1 = px.bar(conteos, y = var_cual, x = conteos.index)
 
 
           st.plotly_chart(fig1, use_container_width= True)
@@ -47,7 +50,7 @@ with tab2:
             fig2.add_trace(go.Histogram(x=df[var_disc]))
 
             fig2.update_layout(
-                        title_text='Histograma de la variable {}'.format(var_disc), # title of plot
+                        title_text='Histograma de la variable {}'.format(var_disc),
                         xaxis_title_text='Valor',
                         yaxis_title_text='Cantidad')
 
@@ -61,7 +64,7 @@ with tab3:
 
        if var_cont == None:
             st.warning("Elija una variable para obtener el gráfico")
-       
+
        else:
             fig1 = px.violin(df, x= var_cont, box=True, points="all")
             fig1.update_layout(title="Gráfico de violín de {}".format(var_cont), xaxis_title= var_cont)
