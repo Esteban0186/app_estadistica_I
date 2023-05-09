@@ -4,6 +4,15 @@ from streamlit_extras.colored_header import colored_header
 import base64
 from Principal import df
 
+#Descargar script
+
+def link_descarga(ruta, nombre):
+    with open(ruta, 'rb') as f:
+        archivo = f.read()
+        st.markdown(f'<a href="data:application/octet-stream;base64,{base64.b64encode(archivo).decode("utf-8")}" download="{nombre}">Descarga Script de R</a>', unsafe_allow_html=True)
+
+
+
 #Descagar html
 
 ruta_html = "data/script_R.html"
@@ -44,6 +53,8 @@ df_csv = df
 
 descargador_archivos(df_csv.to_csv(), nombre_archivo="Mundial", extension_archivo= "txt").descargar()
 
+link_descarga(ruta=ruta_html, nombre=nombre_html)
+
 st.balloons()
 
 rain(
@@ -54,9 +65,3 @@ rain(
 
 st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
 
-def link_descarga(ruta, nombre):
-    with open(ruta, 'rb') as f:
-        archivo = f.read()
-        st.markdown(f'<a href="data:application/octet-stream;base64,{base64.b64encode(archivo).decode("utf-8")}" download="{nombre}">Descarga Script de R</a>', unsafe_allow_html=True)
-
-link_descarga(ruta=ruta_html, nombre=nombre_html)
