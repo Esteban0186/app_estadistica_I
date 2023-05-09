@@ -52,8 +52,8 @@ with tab1:
 with tab2:
      st.subheader("Tabla de frecuencias cruzadas")
 
-     var_cual1 = st.selectbox("Seleccione una primera variable", ["País", "Región", "Posición"])
-     var_cual2 = st.selectbox("Seleccione una segunda variable", ["Región", "Posición", "País"])
+     var_cual1 = selectbox("Seleccione una primera variable", ["País", "Región", "Posición"])
+     var_cual2 = selectbox("Seleccione una segunda variable", ["País","Región", "Posición"])
 
      if var_cual1 == var_cual2:
           st.warning("Elija dos variables diferentes")
