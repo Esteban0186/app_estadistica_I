@@ -24,7 +24,9 @@ with tab1:
         else:
 
           #conteos = df[var_cual].value_counts().reset_index().rename(columns={"count": 'Cantidad'})
-          conteos = df[var_cual].value_counts()
+          conteos = df[var_cual].value_counts().reset_index()
+          
+          conteos.columns =  [var_cual, "Cantidad"]
           
           st.dataframe(conteos)
 
@@ -32,7 +34,7 @@ with tab1:
           #                   text = "Cantidad",
           #                   title = "Cantidad de jugadores por la variable {}".format(var_cual),
           #                   height = 400)
-          fig1 = px.bar(conteos, y = var_cual, x = conteos.index)
+          fig1 = px.bar(conteos, y = var_cual, x = "Cantidad")
 
 
           st.plotly_chart(fig1, use_container_width= True)
