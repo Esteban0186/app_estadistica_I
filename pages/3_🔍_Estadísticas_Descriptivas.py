@@ -194,6 +194,5 @@ with tab2:
         col3.metric(label="Rango Intercuartil", value= ric_pp)
         col4.metric(label="Cantidad de Jugadores", value= cantidad_pp)
 
-
-
+st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
 

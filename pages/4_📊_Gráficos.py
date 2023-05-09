@@ -81,3 +81,5 @@ with tab3:
         fig3 = px.violin(df, x= var_cont, box=True, points="all", color='Posición', height= 900)
         fig3.update_layout(title="Gráfico de violín de {} agrupados por posición".format(var_cont), xaxis_title= var_cont)
         st.plotly_chart(fig3, use_container_width= True)
+
+st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)

@@ -11,6 +11,7 @@ colored_header(
                 description="Descripción",
                 color_name="orange-40")
 
+
 tab1, tab2 = st.tabs(["Frecuencias Simples", "Frecuencias cruzadas"])
 
 with tab1:
@@ -77,3 +78,5 @@ with tab2:
           tabla_cruzada = tabla_cruzada.reset_index()
 
           st.table(tabla_cruzada)
+
+st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)

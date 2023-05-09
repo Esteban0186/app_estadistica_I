@@ -36,7 +36,8 @@ st.markdown("* Esteban")
 st.subheader("Descargar datos en csv")
 
 df_csv = df
-descarga = descargador_archivos(df_csv.to_csv(), nombre_archivo="Mundial", extension_archivo= "txt").descargar()
+
+descargador_archivos(df_csv.to_csv(), nombre_archivo="Mundial", extension_archivo= "txt").descargar()
 
 st.balloons()
 
@@ -45,3 +46,5 @@ rain(
     font_size=54,
     falling_speed=5,
     animation_length="infinite")
+
+st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)

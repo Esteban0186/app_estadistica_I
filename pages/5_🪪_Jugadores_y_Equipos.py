@@ -75,3 +75,5 @@ with st.expander("Equipos"):
 
         elif len(set(resultado2["País"])) == 1:
             st.dataframe(resultado2, use_container_width= True)
+
+st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)

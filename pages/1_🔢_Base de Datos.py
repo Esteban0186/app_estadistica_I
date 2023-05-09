@@ -9,3 +9,5 @@ colored_header(
                 color_name="green-40")
 
 st.dataframe(df.head(10))
+
+st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
