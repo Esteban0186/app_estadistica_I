@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
+from streamlit_extras.switch_page_button import switch_page
 from Principal import df
 
 
@@ -76,4 +77,5 @@ with st.expander("Equipos"):
         elif len(set(resultado2["País"])) == 1:
             st.dataframe(resultado2, use_container_width= True)
 
-st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
+if st.button("Ir a Página Principal"):
+    switch_page("Principal")

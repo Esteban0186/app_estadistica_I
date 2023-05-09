@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_extras.colored_header import colored_header
 from streamlit_extras.no_default_selectbox import selectbox
+from streamlit_extras.switch_page_button import switch_page
 import pandas as pd
 from Principal import df
 
@@ -79,4 +80,6 @@ with tab2:
 
           st.table(tabla_cruzada)
 
-st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
+if st.button("Ir a Página Principal"):
+    switch_page("Principal")
+

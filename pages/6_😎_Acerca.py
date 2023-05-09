@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_extras.let_it_rain import rain
 from streamlit_extras.colored_header import colored_header
+from streamlit_extras.switch_page_button import switch_page
 import base64
 from Principal import df
 
@@ -63,5 +64,5 @@ rain(
     falling_speed=5,
     animation_length="infinite")
 
-st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
-
+if st.button("Ir a Página Principal"):
+    switch_page("Principal")

@@ -3,6 +3,7 @@ from streamlit_extras.colored_header import colored_header
 import plotly.express as px
 import plotly.graph_objects as go
 from streamlit_extras.no_default_selectbox import selectbox
+from streamlit_extras.switch_page_button import switch_page
 from Principal import df
 
 
@@ -82,4 +83,5 @@ with tab3:
         fig3.update_layout(title="Gráfico de violín de {} agrupados por posición".format(var_cont), xaxis_title= var_cont)
         st.plotly_chart(fig3, use_container_width= True)
 
-st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
+if st.button("Ir a Página Principal"):
+    switch_page("Principal")

@@ -3,6 +3,7 @@ from streamlit_extras.colored_header import colored_header
 from Principal import df
 import statistics
 from streamlit_extras.no_default_selectbox import selectbox
+from streamlit_extras.switch_page_button import switch_page
 import numpy as np
 
 
@@ -194,5 +195,5 @@ with tab2:
         col3.metric(label="Rango Intercuartil", value= ric_pp)
         col4.metric(label="Cantidad de Jugadores", value= cantidad_pp)
 
-st.markdown('<a href="/" target="Principal">Página Principal</a>', unsafe_allow_html=True)
-
+if st.button("Ir a Página Principal"):
+    switch_page("Principal")
