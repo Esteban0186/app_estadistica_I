@@ -52,6 +52,14 @@ st.subheader("Descargar datos en csv")
 
 df_csv = df
 
+csv = df.to_csv(index = False)
+
+
+st.download_button("Descargar base de datos",
+                   data = csv,
+                   file_name= "Base_datos.csv",
+                   mime = "text/csv")
+
 descargador_archivos(df_csv.to_csv(), nombre_archivo="Mundial", extension_archivo= "txt").descargar()
 
 link_descarga(ruta=ruta_html, nombre=nombre_html)
