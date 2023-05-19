@@ -5,11 +5,14 @@ from  PIL import Image
 from streamlit_extras.colored_header import colored_header
 import pandas as pd
 
-
-
 #Objetos precargados
 
 img = Image.open("data/football.png")
+
+st.set_page_config(page_title = "Trabajo final",
+                   page_icon = img,
+                   layout = "wide", #Inciar con las imagenes a lo ancho
+                   initial_sidebar_state = "expanded")
 
 @st.cache_data
 def cargar_datos():
@@ -33,12 +36,6 @@ df = limpiar_nombres(data_frame= df, variable = "Jugador",
                      error =malos, correccion = buenos)
 
 #Estilo de la página
-
-st.set_page_config(page_title = "Trabajo final",
-                   page_icon = img,
-                   layout = "wide", #Inciar con las imagenes a lo ancho
-                   initial_sidebar_state = "expanded")
-
 
 def main():
        st.title("Trabajo Final: Datos del Mundial")
