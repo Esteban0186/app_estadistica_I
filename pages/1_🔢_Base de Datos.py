@@ -27,8 +27,8 @@ builder.configure_side_bar(filters_panel = True,
                            defaultToolPanel = 'Panel')
 
 builder.configure_pagination(enabled=True,
-                             paginationAutoPageSize=True,
-                             paginationPageSize=100)
+                             paginationAutoPageSize=False,
+                             paginationPageSize=3)
 go = builder.build()
 
 AgGrid(df.head(20),
