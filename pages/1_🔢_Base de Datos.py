@@ -18,7 +18,7 @@ builder.configure_column("first_column",
                          header_name="First")
 builder.configure_pagination(enabled=True,
                              paginationAutoPageSize=True,
-                             paginationPageSize=10)
+                             paginationPageSize=100)
 go = builder.build()
 
 AgGrid(df,
