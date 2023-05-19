@@ -12,11 +12,6 @@ def chatea_con_df(prompt):
     print(resultado)
     return resultado
 
-st.set_page_config(
-    page_title="Pregúntale a la IA",
-    layout= "wide")
-    
-
 colored_header(
     label="EPregúntale a la IA",
     description="""Aquí puedes utilizar chat GPT para hacer tus preguntas a los datos""",
