@@ -11,8 +11,6 @@ colored_header(
                 description="Descripción",
                 color_name="green-40")
 
-st.dataframe(df.head(10))
-
 builder = GridOptionsBuilder.from_dataframe(df)
 builder.configure_default_column(min_column_width= 5,
                                  resizable= True,
