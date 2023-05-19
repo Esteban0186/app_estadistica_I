@@ -6,7 +6,7 @@ import base64
 from Principal import df
 
 #Descargar script
-@st.cache_data
+@st.cache_resource
 def link_descarga(ruta, nombre):
     with open(ruta, 'rb') as f:
         archivo = f.read()
