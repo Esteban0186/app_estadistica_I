@@ -34,6 +34,7 @@ go = builder.build()
 AgGrid(df,
        theme = "balham",
        columns_auto_size_mode= True,
+       height= 100,
        gridOptions= go)
 
 if st.button("Ir a Página Principal", key= "mi-boton"):
