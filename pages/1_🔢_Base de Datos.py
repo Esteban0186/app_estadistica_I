@@ -17,11 +17,11 @@ st.dataframe(df.head(10))
 #gd.configure_pagination(enabled= True)
 #gd.configure_default_column(editable= True, groupable= True)
 
-grid_opt = {"pagination": True,  "rowSelection": 'single',}
+#grid_opt = {"pagination": True,  "rowSelection": 'single',}
 AgGrid(df,
        theme = "balham",
        columns_auto_size_mode= True,
-       gridOptions= grid_opt)
+       gridOptions= {"pagination": True})
 
 if st.button("Ir a Página Principal", key= "mi-boton"):
     switch_page("Principal")
