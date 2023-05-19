@@ -13,10 +13,10 @@ colored_header(
 
 st.dataframe(df.head(10))
 
-gd= GridOptionsBuilder.from_dataframe(df)
-gd.configure_pagination(enabled= True)
-gd.configure_default_column(editable= True, groupable= True)
-AgGrid(df)
+#gd= GridOptionsBuilder.from_dataframe(df)
+#gd.configure_pagination(enabled= True)
+#gd.configure_default_column(editable= True, groupable= True)
+AgGrid(df.head(10))
 
 if st.button("Ir a Página Principal", key= "mi-boton"):
     switch_page("Principal")
