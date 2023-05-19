@@ -31,7 +31,7 @@ builder.configure_pagination(enabled=True,
                              paginationPageSize=100)
 go = builder.build()
 
-AgGrid(df,
+AgGrid(df.head(20),
        theme = "balham",
        columns_auto_size_mode= True,
        height= 100,
