@@ -14,7 +14,7 @@ st.set_page_config(page_title = "Trabajo final",
                    layout = "wide", #Inciar con las imagenes a lo ancho
                    initial_sidebar_state = "expanded")
 
-@st.cache_data
+#@st.cache_data
 def cargar_datos():
        df = pd.read_csv("data/datos_limpios.csv")
        return df
