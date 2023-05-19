@@ -19,7 +19,9 @@ builder.configure_default_column(min_column_width= 5,
                                  filterable= True,
                                  sortable= True,
                                  editable= True,
-                                 groupable= True)
+                                 groupable= True, 
+                                 wrapText= True,
+                                 autoHeight = True)
 builder.configure_auto_height(autoHeight= True)
 
 builder.configure_side_bar(filters_panel = True,
