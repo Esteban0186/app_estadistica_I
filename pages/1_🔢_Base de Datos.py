@@ -20,6 +20,7 @@ builder.configure_default_column(min_column_width= 5,
                                  sortable= True,
                                  editable= True,
                                  groupable= True)
+builder.configure_auto_height(autoHeight= True)
 
 builder.configure_pagination(enabled=True,
                              paginationAutoPageSize=True,
