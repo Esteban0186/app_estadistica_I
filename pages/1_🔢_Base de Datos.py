@@ -14,7 +14,11 @@ colored_header(
 st.dataframe(df.head(10))
 
 builder = GridOptionsBuilder.from_dataframe(df)
-builder.configure_column("first_column", header_name="First", editable=True)
+builder.configure_column("first_column",
+                         header_name="First")
+builder.configure_pagination(enabled=True,
+                             paginationAutoPageSize=True,
+                             paginationPageSize=10)
 go = builder.build()
 
 AgGrid(df,
