@@ -1,6 +1,6 @@
 from Principal import df
 import streamlit as st
-import streamlit_extras as stx
+from streamlit_extras.colored_header import colored_header
 from pandasai.llm.openai import OpenAI
 from pandasai import PandasAI
 
@@ -12,10 +12,11 @@ def chatea_con_df(prompt):
     print(resultado)
     return resultado
 
-stx.colored_header(
-    label="EPregúntale a la IA",
-    description="""Aquí puedes utilizar chat GPT para hacer tus preguntas a los datos""",
-                    color_name="green-40")
+colored_header(
+    label="Acerca",
+    description="""Aplicación realizada por el Grupo 2 del curso Estadística Introductoria I,
+                    Universidad de Costa Rica""",
+    color_name="orange-40")
 
 col1, col2 = st.columns(2)
 
