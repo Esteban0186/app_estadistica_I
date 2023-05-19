@@ -13,15 +13,14 @@ colored_header(
 
 st.dataframe(df.head(10))
 
-#gd= GridOptionsBuilder.from_dataframe(df)
-#gd.configure_pagination(enabled= True)
-#gd.configure_default_column(editable= True, groupable= True)
+builder = GridOptionsBuilder.from_dataframe(df)
+builder.configure_column("first_column", header_name="First", editable=True)
+go = builder.build()
 
-#grid_opt = {"pagination": True,  "rowSelection": 'single',}
 AgGrid(df,
        theme = "balham",
        columns_auto_size_mode= True,
-       gridOptions= {"pagination": True})
+       gridOptions= go)
 
 if st.button("Ir a Página Principal", key= "mi-boton"):
     switch_page("Principal")
