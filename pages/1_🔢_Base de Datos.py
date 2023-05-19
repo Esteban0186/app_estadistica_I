@@ -14,8 +14,6 @@ colored_header(
 st.dataframe(df.head(10))
 
 builder = GridOptionsBuilder.from_dataframe(df)
-builder.configure_column("first_column",
-                         header_name="First")
 builder.configure_default_column(min_column_width= 5,
                                  resizable= True,
                                  filterable= True,
