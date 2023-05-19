@@ -4,7 +4,7 @@ import streamlit as st
 from  PIL import Image
 from streamlit_extras.colored_header import colored_header
 import pandas as pd
-import base64
+
 
 
 #Objetos precargados
