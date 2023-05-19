@@ -16,6 +16,13 @@ st.dataframe(df.head(10))
 builder = GridOptionsBuilder.from_dataframe(df)
 builder.configure_column("first_column",
                          header_name="First")
+builder.configure_default_column(min_column_width= 5,
+                                 resizable= True,
+                                 filterable= True,
+                                 sortable= True,
+                                 editable= True,
+                                 groupable= True)
+
 builder.configure_pagination(enabled=True,
                              paginationAutoPageSize=True,
                              paginationPageSize=100)
