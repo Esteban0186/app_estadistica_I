@@ -7,6 +7,7 @@ from Principal import df
 
 
 
+
 colored_header(
                 label="Tablas de Frecuencia",
                 description="Descripción",
