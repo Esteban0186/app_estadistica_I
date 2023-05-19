@@ -22,6 +22,10 @@ builder.configure_default_column(min_column_width= 5,
                                  groupable= True)
 builder.configure_auto_height(autoHeight= True)
 
+builder.configure_side_bar(filters_panel = True,
+                           columns_panel = True,
+                           defaultToolPanel = 'Panel')
+
 builder.configure_pagination(enabled=True,
                              paginationAutoPageSize=True,
                              paginationPageSize=100)
