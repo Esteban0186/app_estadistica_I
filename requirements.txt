@@ -6,5 +6,4 @@ pandas
 numpy
 streamlit_extras
 statistics
-pandasai
-
+streamlit-aggrid
