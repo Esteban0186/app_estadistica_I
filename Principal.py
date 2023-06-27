@@ -38,7 +38,7 @@ df = limpiar_nombres(data_frame= df, variable = "Jugador",
 #Estilo de la página
 
 def main():
-       st.title("Trabajo Final: Datos del Mundial")
+       st.title("Trabajo Final: Datos del Mundial Qatar 2022")
 
        colored_header(
                 label="Introducción",
