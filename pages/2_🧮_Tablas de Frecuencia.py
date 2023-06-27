@@ -10,7 +10,7 @@ from Principal import df
 
 colored_header(
                 label="Tablas de Frecuencia",
-                description="""En nuestra aplicación, proporcionamos funcionalidades que permiten la generación de frecuencias simples a partir de variables cualitativas. Este proceso es esencial para el análisis estadístico y la interpretación de datos.
+                description="""Se pueden generar frecuencias simples a partir de variables cualitativas. Este proceso es esencial para el análisis estadístico y la interpretación de datos.
 
 Las variables cualitativas, también conocidas como variables categóricas, representan características o atributos que pueden clasificarse en distintas categorías pero que no pueden medirse en términos cuantitativos. Ejemplos de estas variables incluyen las posiciones en un equipo de fútbol: delantero, defensa, portero y mediocentro.
 
