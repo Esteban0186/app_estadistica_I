@@ -41,8 +41,13 @@ def main():
        st.title("Trabajo Final: Datos del Mundial")
 
        colored_header(
-                label="Intro",
-                description="Descripción",
+                label="Introducción",
+                description="""El fútbol ha evolucionado desde sus inicios como una actividad social y lúdica en el siglo XIX hasta convertirse en la principal actividad deportiva en muchos países. En sus primeros años, el fútbol era jugado por obreros de diferentes industrias, lo que generaba una identificación social y urbana más que una identidad partidista. Sin embargo, en la actualidad, el fútbol ha adquirido una trascendencia global y los clubes se han convertido en marcas comerciales (López-Herraiz, 2021). Se busca tener equipos competitivos, contar con los mejores jugadores y disfrutar de los beneficios mediáticos, sociales y económicos que esto conlleva.
+Así, el propósito de este trabajo es realizar un análisis detallado y presentar datos relevantes y estadísticas relacionadas con el desempeño de los equipos y jugadores destacados durante el Mundial de Fútbol de Qatar 2022. La realización de este trabajo de estadística es una oportunidad para comprender los patrones y tendencias en el rendimiento de los equipos participantes en el Mundial de Fútbol de Qatar 2022. A través de este análisis, se examina el desempeño de los equipos y se identifican los factores clave que contribuyen al éxito de un equipo en este tipo de competición (Merrell, 2023).
+Para lograr esto, se hará énfasis en variables clave del jugador como la posición en la que juega, la confederación a la que pertenece, los minutos jugados, los goles y las tarjetas amarillas.
+Se identifican correlaciones entre variables, como la relación entre la posición de un equipo en el torneo y su desempeño en términos de minutos jugados, goles marcados y tarjetas amarillas. Lo anterior, brinda información valiosa sobre los factores que pueden tener un impacto significativo en el éxito de un equipo en el Mundial. 
+Estos datos permiten analizar el rendimiento de las confederaciones en el torneo, identificar a las posiciones más destacadas y evaluar su contribución al éxito de sus equipos.
+""",
                 color_name="red-40")
 
 
