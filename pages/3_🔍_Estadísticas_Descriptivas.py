@@ -10,7 +10,13 @@ import numpy as np
 
 colored_header(
             label="Descriptivos",
-            description="Descripción",
+            description=""""Nuestra aplicación calcula y muestra estadísticas descriptivas esenciales: media, moda, mediana y desviación estándar. Estas estadísticas resumen y ofrecen una visión cuantitativa de los datos.
+
+La media representa el "centro" de los datos, la moda indica el valor más frecuente, la mediana es el valor medio en datos ordenados y la desviación estándar mide la dispersión de los datos alrededor de la media.
+
+Por ejemplo, en un equipo de fútbol, podríamos calcular la moda de las posiciones de los jugadores ("Delantero", "Defensa", "Portero" y "Mediocentro") para determinar la posición más común. Para variables cuantitativas, como la edad o goles marcados, podríamos calcular todas estas estadísticas.
+
+En nuestra aplicación, los usuarios pueden seleccionar variables, generar estadísticas descriptivas con un clic y visualizarlas en gráficos y tablas para facilitar su interpretación."""",
             color_name="blue-40")
 
 tab1, tab2 = st.tabs(["Medidas de tendencia central", "Medidas de dispersión"])
