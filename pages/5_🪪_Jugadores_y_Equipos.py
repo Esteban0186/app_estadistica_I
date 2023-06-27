@@ -7,7 +7,11 @@ from Principal import df
 
 colored_header(
     label="Estadísticas de jugadores y Equipos",
-    description="""Buscar el nombre del jugador para ver sus estadísticas""",
+    description="""Buscar el nombre del jugador para ver sus estadísticas: Nuestra aplicación incluye una funcionalidad de búsqueda robusta que permite a los usuarios explorar estadísticas por jugadores y equipos. Esta característica es útil para la comparación de rendimiento y el análisis de datos.
+
+Los usuarios pueden introducir el nombre de un jugador o un equipo en el campo de búsqueda para obtener un resumen de las estadísticas relevantes. Para los jugadores, se pueden buscar variables como goles marcados, asistencias, tiempo jugado, entre otros. Para los equipos, se pueden buscar variables como victorias, derrotas, goles a favor y en contra, entre otras.
+
+""",
                     color_name="green-40")
 
 with st.expander("Jugadores"):
