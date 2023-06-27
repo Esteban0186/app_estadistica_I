@@ -25,11 +25,11 @@ colored_header(
                     Universidad de Costa Rica""",
     color_name="orange-40")
 st.subheader("Integrantes")
-st.markdown("* Malcom")
-st.markdown("* Lucía")
-st.markdown("* Nayelli")
-st.markdown("* David")
-st.markdown("* Esteban")
+st.markdown("* Malcom Morris")
+st.markdown("* Lucía Carvajal")
+st.markdown("* Nayelli Cabezas")
+st.markdown("* David Mora")
+st.markdown("* Esteban Navarro")
 
 st.subheader("Descargar datos en csv")
 
