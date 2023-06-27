@@ -16,7 +16,7 @@ La media representa el "centro" de los datos, la moda indica el valor más frecu
 
 Por ejemplo, en un equipo de fútbol, podríamos calcular la moda de las posiciones de los jugadores ("Delantero", "Defensa", "Portero" y "Mediocentro") para determinar la posición más común. Para variables cuantitativas, como la edad o goles marcados, podríamos calcular todas estas estadísticas.
 
-En nuestra aplicación, los usuarios pueden seleccionar variables, generar estadísticas descriptivas con un clic y visualizarlas en gráficos y tablas para facilitar su interpretación."""",
+En nuestra aplicación, los usuarios pueden seleccionar variables, generar estadísticas descriptivas con un clic y visualizarlas en gráficos y tablas para facilitar su interpretación.""",
             color_name="blue-40")
 
 tab1, tab2 = st.tabs(["Medidas de tendencia central", "Medidas de dispersión"])
