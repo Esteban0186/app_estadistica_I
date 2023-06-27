@@ -9,7 +9,9 @@ from Principal import df
 
 colored_header(
     label="Gráficos",
-    description="Descripción",
+    description="""Se pueden hacer visualizaciones de datos con gráficos de barras, histogramas y gráficos de violín. Los gráficos de barras son ideales para variables cualitativas, mostrando la frecuencia de cada categoría. Los histogramas y gráficos de violín, en cambio, visualizan variables cuantitativas, representando la distribución de los datos.
+
+Los usuarios pueden seleccionar la variable y el tipo de gráfico deseado con un solo clic, permitiendo una interpretación visual intuitiva y efectiva de los datos.""",
     color_name="yellow-40")
 
 tab1, tab2, tab3 = st.tabs(["Variables Cualitativas", "Variables Discretas", "Variables Continuas"])
